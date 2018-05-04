@@ -1,11 +1,15 @@
 const webpack = require('webpack')
 const path = require('path')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 const DIST_DIR = path.resolve(__dirname, './dist')
 const SRC_DIR = path.resolve(__dirname, './src/client')
 
+const liveReloadOptions = {}
+
 const config = {
   mode: 'development',
+  watch: true,
   devtool: 'source-map',
   entry: {
      main: SRC_DIR + '/index.js'
@@ -37,9 +41,8 @@ const config = {
        }]
      }
     ],
-
-  }
-
+  },
+  plugins: [new LiveReloadPlugin(liveReloadOptions)]
 }
 
 module.exports = config
