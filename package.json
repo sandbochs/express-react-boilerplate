@@ -11,7 +11,8 @@
     "test-only": "PORT=5000 jest",
     "test:watch": "PORT=5000 jest --watch",
     "build": "babel src/**/*.js -d dist",
-    "watch": "nodemon --exec npm start -e js,sql",
+    "watch": "nodemon --exec npm start -e js,sql -i dist,src/client",
+    "webpack": "webpack -w",
     "start": "babel-node src/server"
   },
   "repository": {
@@ -25,9 +26,13 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.1",
+    "babel-loader": "^7.1.4",
     "babel-plugin-module-resolver": "^3.1.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
@@ -36,12 +41,19 @@
     "flow-bin": "^0.66.0",
     "flow-typed": "^2.3.0",
     "jest": "^22.4.2",
+    "node-sass": "^4.9.0",
     "nodemon": "^1.15.1",
-    "supertest": "^3.0.0"
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "supertest": "^3.0.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "supertest": "^3.0.0"
   }
 }
