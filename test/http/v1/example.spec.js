@@ -1,3 +1,4 @@
+// @flow
 import request from 'supertest'
 
 import app from 'server'
@@ -9,7 +10,7 @@ describe('/v1/example', () => {
         .get('/v1/example')
         .expect(200)
         .then((res) => {
-          expect(res.body).toEqual({ hello: 'world' })
+          expect(res.text).toEqual('Hello World')
         })
     })
   })

@@ -3,3 +3,6 @@ flow-typed
 coverage
 jest.config.js
 dist
+migrations
+bin
+test-util

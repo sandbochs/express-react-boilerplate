@@ -7,6 +7,11 @@
   "plugins": [
     "flowtype"
   ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
   "rules": {
     "semi": 0,
     "max-len": [
@@ -18,6 +23,7 @@
       2,
       "always"
     ],
+    "import/first": 0,
     "flowtype/require-valid-file-annotation": [
       2,
       "always"
