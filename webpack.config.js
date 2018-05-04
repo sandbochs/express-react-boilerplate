@@ -6,6 +6,7 @@ const SRC_DIR = path.resolve(__dirname, './src/client')
 
 const config = {
   mode: 'development',
+  devtool: 'source-map',
   entry: {
      main: SRC_DIR + '/index.js'
    },
